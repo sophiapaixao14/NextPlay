@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextPlay - Perfil do Usuário</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="../assets/perfil.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="../Images/Logo Nextplay.png" alt="Logo NextPlay" class="logo-img">
+            <span class="logo-texto">NextPlay</span>
+        </div>
+        <nav class="menu-links">
+            <a href="../index.html">Home</a>
+            <a href="../index.html">Jogos</a>
+            <a href="#">Top 10</a>
+            <a href="sobre.html">Sobre</a>
+        </nav>
+        <div class="nav-icons">
+            <a href="pesquisa.html" style="color: inherit; text-decoration: none;"><i class="fas fa-search"></i></a>
+            <a href="#" class="active"><i class="far fa-user-circle"></i></a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="perfil-layout">
+            
+            <div class="coluna-esquerda">
+                <div class="info-topo">
+                    <div class="avatar-secao">
+                        <div class="avatar-circulo">
+                            <img src="../Images/Sophia imagem.jpeg" alt="Foto de perfil">
+                            <div class="overlay-foto">foto de perfil</div>
+                        </div>
+                        <a href="#" class="link-acao">Alterar foto de perfil</a>
+                    </div>
+
+                    <div class="usuario-texto">
+                        <h1 class="nome-usuario">Nome do usuário</h1>
+                        <p class="email-sub">e-mail do usuário</p>
+                        
+                        <div class="opcoes-grid">
+                            <div class="grupo-opcao">
+                                <h3>Preferências</h3>
+                                <label class="radio-container">
+                                    <input type="radio" name="tema" checked>
+                                    <span class="checkmark"></span> Tema claro
+                                </label>
+                                <label class="radio-container">
+                                    <input type="radio" name="tema">
+                                    <span class="checkmark"></span> Tema escuro
+                                </label>
+                            </div>
+
+                            <div class="grupo-opcao">
+                                <h3>Verificação <span class="tag-verificado">Método de verificação ativado!</span></h3>
+                                <label class="radio-container">
+                                    <input type="radio" name="verificacao" checked>
+                                    <span class="checkmark"></span> Autenticador
+                                </label>
+                                <label class="radio-container">
+                                    <input type="radio" name="verificacao">
+                                    <span class="checkmark"></span> Receber código por e-mail
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="campos-edicao">
+                    <div class="input-grupo">
+                        <label>E-mail</label>
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="e-mail do usuário">
+                            <a href="#" class="link-azul">Alterar e-mail</a>
+                        </div>
+                    </div>
+
+                    <div class="input-grupo">
+                        <label>Senha</label>
+                        <div class="input-wrapper">
+                            <input type="password" placeholder="Senha do usuário">
+                            <a href="#" class="link-azul">Alterar senha</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coluna-direita">
+                <div class="caixa-favoritos">
+                    <h2>Lista de favoritos</h2>
+                    <div class="conteudo-favoritos">
+                        <p>Você ainda não tem jogos na sua lista!</p>
+                        <a href="../index.html" class="btn-explorar">Explorar os jogos</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

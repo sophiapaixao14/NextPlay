@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0b18;
+    background-image: radial-gradient(circle at 10% 20%, rgba(162, 82, 255, 0.05) 0%, transparent 40%);
+    color: #ffffff;
+    font-family: 'Rajdhani', sans-serif;
+    min-height: 100vh;
+}
+
+/* NAVBAR (Padrão compacto) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 6%;
+    background-color: rgba(13, 11, 24, 0.95);
+    border-bottom: 1px solid rgba(162, 82, 255, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo-container { display: flex; align-items: center; gap: 10px; }
+.logo-img { height: 35px !important; width: auto; }
+.logo-texto { font-family: 'Orbitron', sans-serif; font-size: 1.2rem; font-weight: 700; }
+.menu-links { display: flex; gap: 25px; }
+.menu-links a { color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 500; }
+.menu-links a.active { color: #a252ff; }
+.nav-icons { display: flex; gap: 18px; font-size: 1.2rem; cursor: pointer; }
+.nav-icons a.active { color: #a252ff; }
+
+/* LAYOUT PRINCIPAL */
+.main-content {
+    padding: 120px 4% 40px 4%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.perfil-layout {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 40px;
+}
+
+/* ESQUERDA */
+.info-topo {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.avatar-circulo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid #5a1cd1;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+    box-shadow: 0 0 20px rgba(162, 82, 255, 0.3);
+}
+
+.avatar-circulo img { width: 100%; height: 100%; object-fit: cover; opacity: 0.4; }
+
+.overlay-foto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    width: 80%;
+}
+
+.link-acao {
+    color: #a252ff;
+    font-size: 0.85rem;
+    text-decoration: underline;
+    display: block;
+    text-align: center;
+}
+
+.nome-usuario { font-family: 'Orbitron', sans-serif; font-size: 1.8rem; margin-bottom: 2px; }
+.email-sub { color: #8c8a9e; font-size: 1.1rem; margin-bottom: 25px; }
+
+.opcoes-grid { display: flex; gap: 40px; }
+.grupo-opcao h3 { font-size: 1rem; color: #ffffff; margin-bottom: 12px; }
+.tag-verificado { font-size: 0.65rem; color: #4CAF50; vertical-align: middle; margin-left: 5px; }
+
+/* RADIO BUTTONS ESTILIZADOS */
+.radio-container {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #8c8a9e;
+    user-select: none;
+}
+
+.radio-container input { position: absolute; opacity: 0; cursor: pointer; }
+
+.checkmark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: transparent;
+    border: 1px solid #5a1cd1;
+    border-radius: 50%;
+}
+
+.radio-container:hover input ~ .checkmark { border-color: #a252ff; }
+.radio-container input:checked ~ .checkmark { background-color: #5a1cd1; border-color: #a252ff; }
+
+/* CAMPOS DE EDIÇÃO */
+.campos-edicao {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.input-grupo { margin-bottom: 20px; }
+.input-grupo label { display: block; font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; }
+
+.input-wrapper { position: relative; width: 100%; }
+
+.input-wrapper input {
+    width: 100%;
+    padding: 12px 15px;
+    background: #2a2a35;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+}
+
+.link-azul {
+    position: absolute;
+    right: 0;
+    bottom: -22px;
+    color: #5264ff;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* COLUNA DIREITA - FAVORITOS */
+.caixa-favoritos {
+    background: #0d0b18;
+    border: 2px solid #a252ff;
+    border-radius: 20px;
+    padding: 30px;
+    min-height: 400px;
+    box-shadow: 0 0 25px rgba(162, 82, 255, 0.15);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.caixa-favoritos h2 {
+    font-size: 1.3rem;
+    margin-bottom: 100px;
+    text-align: left;
+}
+
+.conteudo-favoritos p {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.btn-explorar {
+    display: inline-block;
+    background: #5a1cd1;
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.btn-explorar:hover {
+    background: #a252ff;
+    box-shadow: 0 0 15px rgba(162, 82, 255, 0.4);
+}
