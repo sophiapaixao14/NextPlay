@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(rgba(13, 11, 24, 0.4), rgba(13, 11, 24, 0.6)), 
+                url('../Images/Espaço.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: 'Rajdhani', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* NAVBAR (Reajustada para ser mais compacta) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 6%; /* Padding reduzido significativamente */
+    background-color: rgba(13, 11, 24, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(162, 82, 255, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 30px !important; /* Logo compacta */
+    width: auto !important;
+    object-fit: contain !important;
+    transition: transform 0.3s ease, filter 0.3s ease !important;
+}
+
+.logo-container:hover .logo-img {
+    transform: scale(1.05) !important;
+    filter: drop-shadow(0 0 6px rgba(162, 82, 255, 0.5)) !important;
+}
+
+.logo-texto {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem; /* Texto do logo menor */
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.menu-links {
+    display: flex;
+    gap: 25px; /* Gap menor entre os links */
+}
+
+.menu-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem !important; /* Links menores (Imagem 2) */
+    font-weight: 500 !important;   
+    text-transform: none !important; 
+    letter-spacing: 1px !important; 
+    transition: 0.3s;
+}
+
+.menu-links a:hover, .menu-links a.active {
+    color: #a252ff;
+    text-shadow: 0 0 8px rgba(162, 82, 255, 0.8);
+}
+
+.nav-icons {
+    display: flex;
+    gap: 15px; /* Gap menor entre os ícones */
+    font-size: 1.1rem; /* Ícones mais discretos */
+    cursor: pointer;
+}
+
+.nav-icons i {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.nav-icons i:hover {
+    color: #a252ff;
+    transform: scale(1.1);
+}
+
+/* CONTEÚDO PRINCIPAL (Ajustado para Fontes Menores) */
+.main-content {
+    padding: 120px 6% 60px 6%; /* Padding superior maior para compensar a navbar fixa */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.titulo-pagina {
+    font-size: 2.2rem; /* Título mais refinado e menor */
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: left;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 10px rgba(162, 82, 255, 0.3);
+}
+
+/* GRID DE CATEGORIAS COMPACTO */
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px; /* Espaçamento menor entre os blocos */
+}
+
+/* CARDS MENORES (IGUAL À IMAGEM 2) */
+.card-categoria {
+    background: linear-gradient(90deg, rgba(35, 15, 80, 0.45), rgba(13, 11, 24, 0.8));
+    border: 2px solid #5a1cd1;
+    border-radius: 12px;
+    padding: 14px 25px; /* Altura e preenchimento bem menores */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.card-categoria:hover {
+    transform: scale(1.02);
+    border-color: #a252ff;
+    box-shadow: 0 0 15px rgba(162, 82, 255, 0.4);
+}
+
+/* ÍCONES REDUZIDOS */
+.icone-cat {
+    font-size: 1.8rem; /* Ícones menores e proporcionais */
+    color: #ffffff;
+    opacity: 0.85;
+    min-width: 40px;
+    text-align: center;
+}
+
+/* TEXTOS INTERNOS DOS CARDS */
+.info-cat h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem; /* Nome da categoria menor */
+    font-weight: 700;
+    margin-bottom: 1px;
+}
+
+.info-cat p {
+    font-size: 0.85rem; /* Subtexto menor */
+    color: #8c8a9e;
+    font-weight: 500;
+}
+
+/* RESPONSIVIDADE PARA TELAS MENORES */
+@media (max-width: 768px) {
+    .categorias-grid {
+        grid-template-columns: 1fr;
+    }
+    .main-content {
+        padding-top: 100px;
+    }
+}

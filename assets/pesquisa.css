@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(rgba(13, 11, 24, 0.4), rgba(13, 11, 24, 0.6)), 
+                url('../Images/Espaço.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: 'Rajdhani', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* NAVBAR (Reajustada para ser mais compacta) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 6%; /* Padding reduzido significativamente */
+    background-color: rgba(13, 11, 24, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(162, 82, 255, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 30px !important; /* Logo compacta */
+    width: auto !important;
+    object-fit: contain !important;
+    transition: transform 0.3s ease, filter 0.3s ease !important;
+}
+
+.logo-container:hover .logo-img {
+    transform: scale(1.05) !important;
+    filter: drop-shadow(0 0 6px rgba(162, 82, 255, 0.5)) !important;
+}
+
+.logo-texto {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem; /* Texto do logo menor */
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.menu-links {
+    display: flex;
+    gap: 25px; /* Gap menor entre os links */
+}
+
+.menu-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem !important; /* Links menores (Imagem 2) */
+    font-weight: 500 !important;   
+    text-transform: none !important; 
+    letter-spacing: 1px !important; 
+    transition: 0.3s;
+}
+
+.menu-links a:hover, .menu-links a.active {
+    color: #a252ff;
+    text-shadow: 0 0 8px rgba(162, 82, 255, 0.8);
+}
+
+.nav-icons {
+    display: flex;
+    gap: 15px; /* Gap menor entre os ícones */
+    font-size: 1.1rem; /* Ícones mais discretos */
+    cursor: pointer;
+}
+
+.nav-icons i {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.nav-icons i:hover {
+    color: #a252ff;
+    transform: scale(1.1);
+}
+
+/* CONTEÚDO PRINCIPAL (Ajustado para Fontes Menores) */
+.main-content {
+    padding: 120px 6% 60px 6%; /* Padding superior maior para compensar a navbar fixa */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.titulo-pagina {
+    font-size: 2.2rem; /* Título mais refinado e menor */
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: left;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 10px rgba(162, 82, 255, 0.3);
+}
+
+/* BARRA DE BUSCA */
+.container-busca {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.input-busca-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+}
+
+.icone-busca {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #1a1a1a;
+    font-size: 1.2rem;
+}
+
+.input-busca {
+    width: 100%;
+    padding: 14px 20px 14px 55px;
+    background-color: #d1cfdf; /* Cor cinza claro do input do seu print */
+    border: none;
+    border-radius: 14px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    outline: none;
+}
+
+.input-busca::placeholder {
+    color: #8c8a9e;
+}
+
+/* GRID DE JOGOS */
+.jogos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas igual ao print */
+    gap: 20px;
+}
+
+/* CARDS DE JOGO */
+.card-jogo {
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #5a1cd1; /* Bordinha roxa estilosa */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-jogo:hover {
+    transform: scale(1.02);
+    border-color: #a252ff;
+}
+
+.capa-wrapper {
+    position: relative;
+    width: 100%;
+    height: 240px; /* Altura ideal e contida para as capas */
+    background: #130f26;
+}
+
+.capa-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+}
+
+/* TEXTO EM CIMA DA IMAGEM (OVERLAY) */
+.info-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.95)); /* Efeito fade preto no texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.titulo-jogo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.detalhes-jogo {
+    font-size: 0.85rem;
+    color: #b0aebf;
+    font-weight: 500;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 650px) {
+    .jogos-grid {
+        grid-template-columns: 1fr; /* Em telas muito pequenas fica 1 coluna */
+    }
+}
