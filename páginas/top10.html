@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextPlay - Top 10 Jogos</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset de Estilos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0b0c16; /* Fundo escuro idêntico ao print */
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            padding-bottom: 50px;
+        }
+
+        /* Barra de Navegação (Header) */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 50px;
+        }
+
+        .logo {
+            font-family: 'Inter', sans-serif;
+            font-weight: bold;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links a {
+            color: #7b7f9b; /* Cor cinza para os links normais */
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
+
+        /* Links Roxos/Neon em Destaque */
+        .nav-links a.active, .nav-links a:hover {
+            color: #7000ff; 
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 15px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        /* Título Principal Centralizado */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .main-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            letter-spacing: 2px;
+            margin: 50px 0 60px 0;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        /* Grid dos Cards (Duas Colunas) */
+        .games-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 40px;
+            row-gap: 24px;
+        }
+
+        /* Linha do Card (Número + Caixa) */
+        .game-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Número do Ranking */
+        .number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffffff;
+            min-width: 45px;
+            text-align: right;
+        }
+
+        /* Caixa de Conteúdo do Jogo */
+        .card-content {
+            display: flex;
+            align-items: center;
+            background-color: #1b1c2e; /* Fundo cinza-azulado do card */
+            border-radius: 12px;
+            padding: 12px 20px;
+            width: 100%;
+            gap: 15px;
+        }
+
+        /* Espaço para Imagem (Miniatura) */
+        .image-placeholder {
+            width: 75px;
+            height: 48px;
+            background-color: #2b2d42; /* Cor provisória enquanto não há imagens */
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: #646780;
+        }
+
+        /* Textos do Jogo */
+        .game-info {
+            text-align: left;
+        }
+
+        .game-info h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 3px;
+            letter-spacing: 0.5px;
+        }
+
+        .game-info p {
+            font-size: 0.8rem;
+            color: #7b7f9b; /* Detalhes em cinza claro */
+        }
+
+        /* Responsividade para Celulares */
+        @media (max-width: 850px) {
+            .games-grid {
+                grid-template-columns: 1fr; /* Muda para uma coluna só */
+            }
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .main-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span>📖</span> NextPlay
+        </div>
+        <nav class="nav-links">
+            <a href="#">HOME</a>
+            <a href="#">JOGOS</a>
+            <a href="#" class="active">LANÇAMENTOS</a>
+            <a href="#">CATEGORIA</a>
+        </nav>
+        <div class="nav-icons">
+            <span>🔍</span>
+            <span>👤</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="main-title">TOP 10 JOGOS<br>MAIS AGUARDADOS</h1>
+
+        <div class="games-grid">
+            
+            <div class="game-card">
+                <span class="number">01</span>
+                <div class="card-content">
+                    <div class="image-placeholder">[IMG]</div>
+                    <div class="game-info">
+                        <h3>GTA VI</h3>
+                        <p>2025 • Ação / Aventura</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <span class="number">02</span>
+                <div class="card-content">
+                    <div class="image-placeholder">[IMG]</div>
+                    <div class="game-info">
+                        <h3>The Witcher IV</h3>
+                        <p>202x • RPG</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <span class="number">03</span>
+                <div class="card-content">
+                    <div class="image-placeholder">[IMG]</div>
+                    <div class="game-info">
+                        <h3>Final Fantasy XIII</h3>
+                        <p>202x • Terror</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <span class="number">04</span>
+                <div class="card-content">
+                    <div class="image-placeholder">[IMG]</div>
+                    <div class="game-info">
+                        <h3>Death Stranding 2</h3>
+                        <p>202x • Aventura</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <span class="number">05</span>
+                <div class="card-content">
+                    <div class="image-placeholder">[IMG]</div>
+                    <div class="game-info">
+                        <h3>Fable</h3>
+                        <p>202x • RPG</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <span class="number">06</span>
+                <div class="card-content">
+                    <div class="image-placeholder">[IMG]</div>
+                    <div class="game-info">
+                        <h3>Assassin's Creed Codename Red</h3>
+                        <p>202x • Ação / RPG</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <span class="number">07</span>
+                <div class="card-content">
+                    <div class="image-placeholder">[IMG]</div>
+                    <div class="game-info">
+                        <h3>Dragon Age Dreadwolf</h3>
+                        <p>2024 • RPG</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <span class="number">08</span>
+                <div class="card-content">
+                    <div class="image-placeholder">[IMG]</div>
+                    <div class="game-info">
+                        <h3>Silent Hill 2 Remake</h3>
+                        <p>2024 • Terror</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <span class="number">09</span>
+                <div class="card-content">
+                    <div class="image-placeholder">[IMG]</div>
+                    <div class="game-info">
+                        <h3>Star Wars Eclipse</h3>
+                        <p>2025 • Ação / Aventura</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <span class="number">10</span>
+                <div class="card-content">
+                    <div class="image-placeholder">[IMG]</div>
+                    <div class="game-info">
+                        <h3>Marvel 1943: Rise of Hydra</h3>
+                        <p>TBA • Ação / Aventura</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
